@@ -11,3 +11,6 @@ app.use("/api/v1", apiRoutes);
 
 app.use(express.json());
 
+const server = app.listen(3000, () => {
+    console.log(`Server started at ${server.address().address}:${server.address().port}`);
+});
