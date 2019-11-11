@@ -12,7 +12,7 @@ function buildFriendJSON(name, photo, scoreArray) {
     }
 
 }
-
+  
 module.exports = {
     friendArray: friendArray,
     addFriend: addFriend
