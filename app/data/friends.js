@@ -10,10 +10,18 @@ function buildFriendJSON(name, photo, scoreArray) {
         photo: photo,
         scores: scoreArray
     }
-
 }
-  
+
+function getLength() {
+    return friendArray.length;
+}
+
+function getFriends() {
+    return friendArray;
+}
 module.exports = {
     friendArray: friendArray,
-    addFriend: addFriend
+    addFriend: addFriend,
+    getLength: getLength,
+    getFriends: getFriends
 }
