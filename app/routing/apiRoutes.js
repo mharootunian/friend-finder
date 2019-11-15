@@ -28,7 +28,7 @@ router.post("/friends", (req, res) => {
     }
     let match = compareScores(user);
     friends.addFriend(user.name, user.photo, user.scores);
-    res.send(`Your match is: ${match.friend}`);
+    res.json(match);
 });
 
 router.get("/populate", (req, res) => {
@@ -50,9 +50,9 @@ function compareScores(user) {
             sum += Math.abs(element.scores[i] - user.scores[i]);
         }
 
-        friendSums.push({ diff: sum, friend: element.name });
+        friendSums.push({ diff: sum, friend: element.name, photo: element.photo });
     });
-
+ 
     let match = friendSums.sort(function (a, b) {
         const ab = a.diff;
         const bb = b.diff;

@@ -6,90 +6,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./survey.js"></script>
 </head>
 
 <body>
 
-    <form action="./api/friends" method="POST">
+    <form>
+
+        <b>Name:</b><input name="name" id="name" type="input"> <br />
+        <b>Photo URL:</b><input name="photo" id="photo" type="input"> <br />
+
+
         <h3>1. You like cheese</h3>
-        <input name="q1" type="radio" value="1" /> 1 (Strongly Agree)<br />
-        <input name="q1" type="radio" value="2" /> 2 <br />
-        <input name="q1" type="radio" value="3" /> 3 <br />
-        <input name="q1" type="radio" value="4" /> 4 <br />
-        <input name="q1" type="radio" value="5" /> 5 (Strongly Disagree)
+        <input name="q1" id="q1" type="radio" value="1" /> 1 (Strongly Agree)<br />
+        <input name="q1" id="q1" type="radio" value="2" /> 2 <br />
+        <input name="q1" id="q1" type="radio" value="3" /> 3 <br />
+        <input name="q1" id="q1" type="radio" value="4" /> 4 <br />
+        <input name="q1" id="q1" type="radio" value="5" /> 5 (Strongly Disagree)
 
         <h3>2. You rather eat cheese than not cheese</h3>
-        <input name="q2" type="radio" value="1" /> 1 (Strongly Agree)<br />
-        <input name="q2" type="radio" value="2" /> 2 <br />
-        <input name="q2" type="radio" value="3" /> 3 <br />
-        <input name="q2" type="radio" value="4" /> 4 <br />
-        <input name="q2" type="radio" value="5" /> 5 (Strongly Disagree)
+        <input name="q2" id="q2" type="radio" value="1" /> 1 (Strongly Agree)<br />
+        <input name="q2" id="q2" type="radio" value="2" /> 2 <br />
+        <input name="q2" id="q2" type="radio" value="3" /> 3 <br />
+        <input name="q2" id="q2" type="radio" value="4" /> 4 <br />
+        <input name="q2" id="q2" type="radio" value="5" /> 5 (Strongly Disagree)
 
         <h3>3. You rather eat nothing <i>but</i> cheese</h3>
-        <input name="q3" type="radio" value="1" /> 1 (Strongly Agree)<br />
-        <input name="q3" type="radio" value="2" /> 2 <br />
-        <input name="q3" type="radio" value="3" /> 3 <br />
-        <input name="q3" type="radio" value="4" /> 4 <br />
-        <input name="q3" type="radio" value="5" /> 5 (Strongly Disagree)
+        <input name="q3" id="q3" type="radio" value="1" /> 1 (Strongly Agree)<br />
+        <input name="q3" id="q3" type="radio" value="2" /> 2 <br />
+        <input name="q3" id="q3" type="radio" value="3" /> 3 <br />
+        <input name="q3" id="q3" type="radio" value="4" /> 4 <br />
+        <input name="q3" id="q3" type="radio" value="5" /> 5 (Strongly Disagree)
 
         <h3>4. You could subsist off cheese alone</h3>
-        <input name="q4" type="radio" value="1" /> 1 (Strongly Agree)<br />
-        <input name="q4" type="radio" value="2" /> 2 <br />
-        <input name="q4" type="radio" value="3" /> 3 <br />
-        <input name="q4" type="radio" value="4" /> 4 <br />
-        <input name="q4" type="radio" value="5" /> 5 (Strongly Disagree)  
-        
+        <input name="q4" id="q4" type="radio" value="1" /> 1 (Strongly Agree)<br />
+        <input name="q4" id="q4" type="radio" value="2" /> 2 <br />
+        <input name="q4" id="q4" type="radio" value="3" /> 3 <br />
+        <input name="q4" id="q4" type="radio" value="4" /> 4 <br />
+        <input name="q4" id="q4" type="radio" value="5" /> 5 (Strongly Disagree)
+
         <h3>5. People who dont like cheese kind of suck</h3>
-        <input name="q5" type="radio" value="1" /> 1 (Strongly Agree)<br />
-        <input name="q5" type="radio" value="2" /> 2 <br />
-        <input name="q5" type="radio" value="3" /> 3 <br />
-        <input name="q5" type="radio" value="4" /> 4 <br />
-        <input name="q5" type="radio" value="5" /> 5 (Strongly Disagree)
+        <input name="q5" id="q5" type="radio" value="1" /> 1 (Strongly Agree)<br />
+        <input name="q5" id="q5" type="radio" value="2" /> 2 <br />
+        <input name="q5" id="q5" type="radio" value="3" /> 3 <br />
+        <input name="q5" id="q5" type="radio" value="4" /> 4 <br />
+        <input name="q5" id="q5" type="radio" value="5" /> 5 (Strongly Disagree)
 
         <h3>6. If you could only take one thing with you to a deserted, it would be cheese</h3>
-        <input name="q6" type="radio" value="1" /> 1 (Strongly Agree)<br />
-        <input name="q6" type="radio" value="2" /> 2 <br />
-        <input name="q6" type="radio" value="3" /> 3 <br />
-        <input name="q6" type="radio" value="4" /> 4 <br />
-        <input name="q6" type="radio" value="5" /> 5 (Strongly Disagree)
+        <input name="q6" id="q6" type="radio" value="1" /> 1 (Strongly Agree)<br />
+        <input name="q6" id="q6" type="radio" value="2" /> 2 <br />
+        <input name="q6" id="q6" type="radio" value="3" /> 3 <br />
+        <input name="q6" id="q6" type="radio" value="4" /> 4 <br />
+        <input name="q6" id="q6" type="radio" value="5" /> 5 (Strongly Disagree)
 
         <h3>7. You would kill a man for cheese</h3>
-        <input name="q1" type="radio" value="1" /> 1 (Strongly Agree)<br />
-        <input name="q1" type="radio" value="2" /> 2 <br />
-        <input name="q1" type="radio" value="3" /> 3 <br />
-        <input name="q1" type="radio" value="4" /> 4 <br />
-        <input name="q1" type="radio" value="5" /> 5 (Strongly Disagree)
+        <input name="q7" id="q7" type="radio" value="1" /> 1 (Strongly Agree)<br />
+        <input name="q7" id="q7" type="radio" value="2" /> 2 <br />
+        <input name="q7" id="q7" type="radio" value="3" /> 3 <br />
+        <input name="q7" id="q7" type="radio" value="4" /> 4 <br />
+        <input name="q7" id="q7" type="radio" value="5" /> 5 (Strongly Disagree)
 
         <h3>8. You would at least slap a man for cheese</h3>
-        <input name="q1" type="radio" value="1" /> 1 (Strongly Agree)<br />
-        <input name="q1" type="radio" value="2" /> 2 <br />
-        <input name="q1" type="radio" value="3" /> 3 <br />
-        <input name="q1" type="radio" value="4" /> 4 <br />
-        <input name="q1" type="radio" value="5" /> 5 (Strongly Disagree)
+        <input name="q8" id="q8" type="radio" value="1" /> 1 (Strongly Agree)<br />
+        <input name="q8" id="q8" type="radio" value="2" /> 2 <br />
+        <input name="q8" id="q8" type="radio" value="3" /> 3 <br />
+        <input name="q8" id="q8" type="radio" value="4" /> 4 <br />
+        <input name="q8" id="q8" type="radio" value="5" /> 5 (Strongly Disagree)
 
         <h3>9. You've broken up with someone in the past for not liking cheese</h3>
-        <input name="q1" type="radio" value="1" /> 1 (Strongly Agree)<br />
-        <input name="q1" type="radio" value="2" /> 2 <br />
-        <input name="q1" type="radio" value="3" /> 3 <br />
-        <input name="q1" type="radio" value="4" /> 4 <br />
-        <input name="q1" type="radio" value="5" /> 5 (Strongly Disagree)
+        <input name="q9" id="q9" type="radio" value="1" /> 1 (Strongly Agree)<br />
+        <input name="q9" id="q9" type="radio" value="2" /> 2 <br />
+        <input name="q9" id="q9" type="radio" value="3" /> 3 <br />
+        <input name="q9" id="q9" type="radio" value="4" /> 4 <br />
+        <input name="q9" id="q9" type="radio" value="5" /> 5 (Strongly Disagree)
 
         <h3>10. "Cheese" is your favorite flavor. Doesnt matter for what.</h3>
-        <input name="q1" type="radio" value="1" /> 1 (Strongly Agree)<br />
-        <input name="q1" type="radio" value="2" /> 2 <br />
-        <input name="q1" type="radio" value="3" /> 3 <br />
-        <input name="q1" type="radio" value="4" /> 4 <br />
-        <input name="q1" type="radio" value="5" /> 5 (Strongly Disagree)
+        <input name="q10" id="q10" type="radio" value="1" /> 1 (Strongly Agree)<br />
+        <input name="q10" id="q10" type="radio" value="2" /> 2 <br />
+        <input name="q10" id="q10" type="radio" value="3" /> 3 <br />
+        <input name="q10" id="q10" type="radio" value="4" /> 4 <br />
+        <input name="q10" id="q10" type="radio" value="5" /> 5 (Strongly Disagree)
         <br>
 
-        <input type="submit" value="Submit Survey">
+        <input type="submit" value="Submit Survey" name="submitForm" id="submitForm">
     </form>
 
+
+
+    
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Your Match!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div id="match-name"></div>
+                  <div id="match-photo"></div>
+    
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
 </body>
 
