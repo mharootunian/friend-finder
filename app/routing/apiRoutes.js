@@ -7,22 +7,36 @@ router.get("/friends", (req, res) => {
 });
 
 router.post("/friends", (req, res) => {
+    console.log(friends.friendArray);
+    console.log("----------");
+    console.log(req.body);
+    let user = {
+        name: req.body.name,
+        photo: req.body.photo,
+        scores: [
+            req.body.q1,
+            req.body.q2,
+            req.body.q3,
+            req.body.q4,
+            req.body.q5,
+            req.body.q6,
+            req.body.q7,
+            req.body.q8,
+            req.body.q9,
+            req.body.q10
+        ]
+    }
+    let match = compareScores(user);
+    friends.addFriend(user.name, user.photo, user.scores);
+    res.send(`Your match is: ${match.friend}`);
+});
+
+router.get("/populate", (req, res) => {
     friends.addFriend("meero", "photoLink", [10, 5, 8, 4, 4, 3, 1, 8, 6, 10]);
     friends.addFriend("john", "photoLinkJohn", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
     friends.addFriend("bill", "linktophoto", [5, 6, 7, 5, 9, 4, 2, 1, 1, 4]);
     friends.addFriend("jill", "photoToBeLLinkedTo", [9, 8, 1, 3, 4, 5, 7, 5, 1, 4]);
-    console.log(friends.friendArray);
-    let user = {
-        name: "User",
-        photo: "PhotoLink:",
-        scores: [
-            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-        ]
-    }
-    let match = compareScores(user);
-    res.send(`Your match is: ${match.friend}`);
 });
-
 
 function compareScores(user) {
     let fl = friends.getLength;
@@ -53,6 +67,7 @@ function compareScores(user) {
     });
 
     match = match[0];
+    console.log(match);
     return match;
 }
 
